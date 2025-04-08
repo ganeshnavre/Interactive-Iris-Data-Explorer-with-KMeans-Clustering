@@ -29,7 +29,7 @@ fig1 = px.scatter(
 st.plotly_chart(fig1)
 
 # Clustering with KMeans
-st.subheader("🤖 KMeans Clustering")
+st.subheader("KMeans Clustering")
 X = df[['sepal_length', 'petal_length']]
 kmeans = KMeans(n_clusters=3, n_init='auto')
 df['cluster'] = kmeans.fit_predict(X)
@@ -42,11 +42,11 @@ fig2 = px.scatter(
 st.plotly_chart(fig2)
 
 # Heatmap
-st.subheader("🔥 Correlation Heatmap")
+st.subheader("Correlation Heatmap")
 corr = df.drop('cluster', axis=1).select_dtypes('number').corr()
 st.dataframe(corr.style.background_gradient(cmap='coolwarm'))
 
 # Footer
 st.markdown("---")
-st.markdown("🚀 Made with ❤️ by your bro.")
+st.markdown(".")
 
